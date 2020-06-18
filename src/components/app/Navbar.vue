@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  name: 'navbar',
   data: () => ({
     date: new Date(),
     interval: null,

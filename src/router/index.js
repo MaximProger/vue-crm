@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    meta: { layout: 'main', auth: true },
+    meta: { layout: 'main' },
     component: () => import('../views/Home.vue')
   },
   {
@@ -54,8 +54,8 @@ const routes = [
     component: () => import('../views/History.vue')
   },
   {
-    path: '/detail-record',
-    name: 'detail-record',
+    path: '/detail/:id',
+    name: 'detail',
     meta: { layout: 'main', auth: true },
     component: () => import('../views/DetailRecord.vue')
   }
