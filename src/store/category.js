@@ -21,6 +21,23 @@ export default {
         throw e
       }
     },
+    async fetchCategoriesById({ commit, dispatch }, id) {
+      try {
+        const uid = await dispatch('getUid')
+        const categories =
+          (
+            await firebase
+              .database()
+              .ref(`/users/${uid}/categories`)
+              .child(id)
+              .once('value')
+          ).val() || {}
+        return { ...categories, id }
+      } catch (e) {
+        commit('setError', e)
+        throw e
+      }
+    },
     async updateCategory({ commit, dispatch }, { title, limit, id }) {
       try {
         const uid = await dispatch('getUid')
