@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 import dateFilter from '@/filters/date.filter'
 import currencyFilter from '@/filters/currency.filter'
+import localizeFilter from '@/filters/localize.filter'
 import tooltipDirective from '@/directives/tooltip.directive'
 import messagePlugin from '@/utils/message.plugin'
 import Loader from '@/components/app/Loader'
@@ -19,6 +20,7 @@ import 'firebase/database'
 Vue.config.productionTip = false
 Vue.filter('date', dateFilter)
 Vue.filter('currency', currencyFilter)
+Vue.filter('localize', localizeFilter)
 Vue.use(Vuelidate)
 Vue.use(messagePlugin)
 Vue.component('Paginate', Paginate)

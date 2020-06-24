@@ -1,0 +1,11 @@
+{
+  "ProfileTitle": "Profile",
+  "Name": "Name",
+  "NameValidation": "The name must not be empty",
+  "Refresh": "Refresh",
+  "Menu_Bill": "Bill",
+  "Menu_History": "History",
+  "Menu_Planning": "Planning",
+  "Menu_Record": "Record",
+  "Menu_Categories": "Categories"
+}
