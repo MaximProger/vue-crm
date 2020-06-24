@@ -44,6 +44,7 @@
 <script>
 import { required } from 'vuelidate/lib/validators'
 import { mapGetters, mapActions } from 'vuex'
+// import localeFilter from '@/filters/localize.filter'
 export default {
   data: () => ({
     name: '',
@@ -77,6 +78,11 @@ export default {
       } catch (e) {
         console.log(e)
       }
+    }
+  },
+  metaInfo() {
+    return {
+      title: this.$title(`ProfileTitle`)
     }
   }
 }

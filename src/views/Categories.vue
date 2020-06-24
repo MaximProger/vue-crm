@@ -47,6 +47,11 @@ export default {
       this.categories[idx].limit = category.limit
       this.updateCount++
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$title(`Menu_Categories`)
+    }
   }
 }
 </script>
